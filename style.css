@@ -1,0 +1,34 @@
+body{
+    text-align: center;
+}
+
+button{
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    text-align: center;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.calculator{
+    margin: 0 auto;
+    background-color: #000;
+    width: 350px;
+    padding: 20px 15px ;
+    border-radius: 5px;
+}
+
+.calculator input{
+    height: 150px;
+    width: 80%;
+    font-size: 25px;
+    padding: 15px;
+    margin: 9px 0 5px 0;
+    background-color: #ccc;
+  border-radius: 5px;
+  text-align: right;
+  pointer-events: none  ;
+}
+
