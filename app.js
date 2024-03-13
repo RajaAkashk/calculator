@@ -1,27 +1,21 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const screen = document.querySelector("input");
-    const buttons = document.querySelectorAll("button");
-    const equal = document.querySelector("#equal");
-    const clear = document.querySelector("#clear");
 
-    buttons.forEach(function(button) {
-        button.addEventListener("click", function(e) {
-            let value = e.target.dataset.num;
-            screen.value += value;
-        });
-    });
+function addToDisplay(value) {
+    document.getElementById('display').value += value;
+  }
 
-    equal.addEventListener("click", function() {
-        if (screen.value === "") {
-            screen.value = "";
-        } else {
-            let answer = eval(screen.value);
-            // let answer = new Function('return ' + screen.value)();
-            screen.value = answer;
-        }
-    });
+  function clearDisplay() {
+    document.getElementById('display').value = '';
+  }
 
-    clear.addEventListener("click", function() {
-        screen.value = "";
-    });
-});
+  function calculate() {
+    let expression = document.getElementById('display').value;
+    let result;
+    try {
+      result = eval(expression);
+    } catch (error) {
+      result = 'Error';
+    }
+    document.getElementById('display').value = result;
+  }
+
+
